@@ -13,9 +13,10 @@ function App() {
   
   return (
     <div >
-      <ScrollMenu/>
+      <NavBar /> 
+      <ScrollMenu/> 
       
-        {/* <NavBar /> */}
+        
         
   
     </div>

@@ -3,21 +3,30 @@ import {Nav, NavDropdown,Container, Navbar, Form, FormControl, Button} from 'rea
 
 const NavBar = () => {
     return (
-        <Navbar bg="light" expand="lg">
-  <Container fluid>
+        
+        <Navbar bg="light" expand="lg" >
+            
+  <Container fluid style={{display:'flex', margin:'auto'}}>
     {/* <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>*/}
     <img src="logo.svg" alt="imageici" href="#"></img> 
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
-      <Nav
-        className="me-auto my-2 my-lg-0"
-        style={{ maxHeight: '100px' }}
-        navbarScroll
-      >
+      <Nav className="me-auto my-2 my-lg-0" style={{ display: 'flex',maxHeight: '70px',margin: "auto", color:"red" }} >
         <Nav.Link href="#action1">catégories</Nav.Link>
         <Nav.Link href="#action2">Marques</Nav.Link>
-        <Nav.Link href="#" >Explorer</Nav.Link>
+        <NavDropdown title="Explorer" id="navbarScrollingDropdown">
+          <NavDropdown.Item href="#action3">Bons Plans</NavDropdown.Item>
+          <NavDropdown.Item href="#action4">Codes Promos</NavDropdown.Item>
+          <NavDropdown.Item href="#action4">Reductions</NavDropdown.Item>
+          <NavDropdown.Item href="#action4">Cadeaux</NavDropdown.Item>
+          <NavDropdown.Divider />
+          <NavDropdown.Item href="#action5">
+            Top membres
+          </NavDropdown.Item>
+        </NavDropdown>
       </Nav>
+        
+      <div style={{display:'flex', margin:'auto'}}>
       <Form className="d-flex">
         <FormControl
           type="search"
@@ -27,6 +36,8 @@ const NavBar = () => {
         />
         <Button variant="outline-success">create account</Button>
       </Form>
+      </div>
+
     </Navbar.Collapse>
   </Container>
 </Navbar>

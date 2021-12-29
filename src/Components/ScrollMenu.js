@@ -1,27 +1,45 @@
 import React from 'react'
-import Containers from './Containers'
+import logo from './../logo.svg'
+
+//import Containers from './Containers'
 import {Col, Card, Row} from 'react-bootstrap'
 
 //I found it important in order to create mulptiple cards, and also for the ordering (i used display: flex)
+const Containers = () => {
+    return (
+        <div >
+            <Card style={{ height: "230px", width: "230px", margin: "16px" }}>
+    <Card.Img variant="top" height={43} width={60}  src={logo} />
+    <Card.Body>
+      <Card.Title>Card title</Card.Title>
+      <Card.Text>
+        This is a wider card with supporting text below as a natural lead-in to
+        additional content. This content is a little bit longer.
+      </Card.Text>
+    </Card.Body>
+  </Card> 
+        </div>
+    )
+}
 const ScrollMenu = () => {
+    let items=[Containers,Containers,Containers,Containers,Containers,Containers,Containers];
+let itemList=[];
+items.forEach((item,index)=>{
+  itemList.push(item)
+})
     return (
         <div>
-            <Card style={{ backgroundColor : "yellow",height: "300px", color : "red" , width: "1270px", position : "Center", margin: "16px"}}>
+            <Card style={{marginTop:"20px" ,margin: "auto", height: "300px", color : "green" , width: "1270px", position : "Center", overflowX:"scroll"}}>
         <div style={{ display: "flex" }}>
-            <Containers/>
-            <Containers/>
-            <Containers/>
-            <Containers/>
-            <Containers/>
-            <Containers/>
-            <Containers/>
-            <Containers/>
-            <Containers/>
-            
+            {/* <Containers/>
+            <C
+            <Containers/> */}
+            {items.map((item,index)=>{
+         return <Containers/>
+     })}
         </div>
         </Card>
         </div>
     )
 }
-
 export default ScrollMenu
