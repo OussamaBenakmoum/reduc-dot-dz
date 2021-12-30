@@ -24,11 +24,11 @@ import AddOffre from "./Components/AddOffre";
 function App() {
   return (
     <div>
-      {/* <NavBar />
+      <NavBar />
       <ScrollMenu />
       <FirstPub />
-      <SecondPub /> */}
-      <AddOffre />
+      <SecondPub />
+      {/* <AddOffre /> */}
     </div>
   );
 }
