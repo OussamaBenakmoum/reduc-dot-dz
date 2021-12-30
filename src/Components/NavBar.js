@@ -5,13 +5,12 @@ const NavBar = () => {
     return (
         
         <Navbar bg="light" expand="lg" >
-            
   <Container fluid style={{display:'flex', margin:'auto'}}>
     {/* <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>*/}
     <img src="logo.svg" alt="imageici" href="#"></img> 
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
-      <Nav className="me-auto my-2 my-lg-0" style={{ display: 'flex',maxHeight: '70px',margin: "auto", color:"red" }} >
+      <Nav className="me-auto my-2 my-lg-1" style={{ display: 'flex',maxHeight: '70px',margin: "auto", color:"red" }} >
         <Nav.Link href="#action1">catégories</Nav.Link>
         <Nav.Link href="#action2">Marques</Nav.Link>
         <NavDropdown title="Explorer" id="navbarScrollingDropdown">

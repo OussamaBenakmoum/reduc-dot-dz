@@ -8,7 +8,8 @@ import {Col, Card, Row} from 'react-bootstrap'
 const Containers = () => {
     return (
         <div >
-            <Card style={{ height: "230px", width: "230px", margin: "16px" }}>
+            
+            <Card style={{ height: "230px", width: "230px", margin: "16px",marginTop:"10px"  }}>
     <Card.Img variant="top" height={43} width={60}  src={logo} />
     <Card.Body>
       <Card.Title>Card title</Card.Title>
@@ -29,8 +30,10 @@ items.forEach((item,index)=>{
 })
     return (
         <div>
-            <Card style={{marginTop:"20px" ,margin: "auto", height: "300px", color : "green" , width: "1270px", position : "Center", overflowX:"scroll"}}>
+            <h1 style={{ margin: "auto",textAlign: 'center',marginTop:"10px", }}>Découvrez nos meilleurs offres sur notre site</h1>
+            <Card style={{marginTop:"10px", margin: "auto", height: "300px", color : "green" , width: "1270px", position : "Center", overflowX:"scroll"}}>
         <div style={{ display: "flex" }}>
+        
             {/* <Containers/>
             <C
             <Containers/> */}
